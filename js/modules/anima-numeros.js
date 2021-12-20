@@ -9,7 +9,7 @@ export default class AnimaNumeros {
 
   // recebe um elemento do DOM, com numero em seu texto
   // incrementa de 0 ao numero final
-  static incrmentarNumero(numero) {
+  static incrementarNumero(numero) {
     const total = +numero.innerText;
     const incremento = Math.floor(total / 100);
     let start = 0;
@@ -24,7 +24,7 @@ export default class AnimaNumeros {
   }
 
   animaNumeros() {
-    this.numeros.forEach(numero =>  this.constructor.incrmentarNumero(numero));
+    this.numeros.forEach(numero =>  this.constructor.incrementarNumero(numero));
   }
 
   // ocorre quando as mutações ocorrer
