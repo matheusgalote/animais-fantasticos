@@ -8,5 +8,4 @@ export default function debouce(callback, delay) {
         timer = null;
       }, delay);
   }
-}
 
