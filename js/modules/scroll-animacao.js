@@ -1,9 +1,11 @@
+import debouce from "./debouce.js";
+
 export default class ScrollAnima {
   constructor(sections) {
     this.sections = document.querySelectorAll(sections);
     this.windowMetade = window.innerHeight * 0.6;
 
-    this.checkDistance = this.checkDistance.bind(this);
+    this.checkDistance = debouce(this.checkDistance.bind(this), 100);
   }
 
   // pega a distancia de cada item em ralacao ao topo
@@ -15,11 +17,12 @@ export default class ScrollAnima {
         offset:  Math.floor(offset - this.windowMetade)
       };
     })
-    console.log(this.distance);
   }
 
   // verifica distancia de cada objeto em relacao ao scroll
   checkDistance() {
+    console.log('test')
+
     this.distance.forEach((item) => {
       if (window.scrollY > item.offset) {
         item.element.classList.add('ativo');
