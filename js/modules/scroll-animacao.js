@@ -17,11 +17,12 @@ export default class ScrollAnima {
         offset:  Math.floor(offset - this.windowMetade)
       };
     })
-    console.log(this.distance);
   }
 
   // verifica distancia de cada objeto em relacao ao scroll
   checkDistance() {
+    console.log('test')
+
     this.distance.forEach((item) => {
       if (window.scrollY > item.offset) {
         item.element.classList.add('ativo');
