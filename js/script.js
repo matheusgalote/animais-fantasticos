@@ -35,7 +35,6 @@ const dropdownMenu = new DropdownMenu('[data-dropdown]');
 dropdownMenu.init();
 
 const funcionamento = new Funcionamento('[data-semana]', 'aberto');
-console.log(funcionamento)
 funcionamento.init();
 
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
