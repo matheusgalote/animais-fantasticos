@@ -28,7 +28,7 @@ tooltip.init();
 const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 scrollAnima.init();
 
-const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]',  ['click', 'touchstart']);
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
 const dropdownMenu = new DropdownMenu('[data-dropdown]');
